@@ -1,0 +1,78 @@
+/* Content Width */
+$max-content-width: 1920px;
+$min-content-width: 360px;
+
+/**
+* Application color scheme
+**/
+
+// Primary
+$black: #1A1A1C;
+$white: #FFFFFF;
+$violet: #7A67F2;
+$green: #C5EF4B;
+$blue: #37A4E2;
+$orange: #F68A3C;
+$rose: #F3B4B4;
+$red: #E73A3A;
+
+// Secondary
+$light-gray: #EEEEEE;
+
+$gray: #A8A8A8;
+$dark-gray: #5F5F60;
+
+$lavender: #CAC2FA;
+$violet-light: #7F6EED;
+$violet-dark: #6957DA;
+
+$lime: #D8F87B;
+$green-dark: #AEDE25;
+$swampy: #A6C747;
+
+$rose-light: #FADADA;
+$rose-dark: #F29595;
+$red-dark: #D46262;
+
+$orange-light: #F2B385;
+$orange-dark: #EC7723;
+
+$blue-light: #92D1F6;
+$blue-dark: #2996D4;
+
+/**
+* Typography Dimensions
+**/
+
+/* Font Weight Variables */
+$bold: 700;
+$semiBold: 600;
+$regular: 400;
+$light: 300;
+
+/* Font Size Variables  */
+$xxxl-font-size: 186px;
+$xxl-font-size: 56px;
+$xl-font-size: 50px;
+$l-font-size: 28px;
+$m-font-size: 26px;
+$s-font-size: 24px;
+$xs-font-size: 22px;
+$xxs-font-size: 18px;
+$xxxs-font-size: 16px;
+$xxxxs-font-size: 14px;
+
+/* Line Height Variables */
+$xl-line-height: 140%;
+$l-line-height: 130%;
+$m-line-height: 120%;
+$s-line-height: 100%;
+
+/* Letter Spacing Variables */
+$l-letter-space: 0;
+$m-letter-space: -2%;
+$s-letter-space: -6%;
+$xs-letter-space: -10%;
+
+/** Cursor */
+$cursor: pointer;

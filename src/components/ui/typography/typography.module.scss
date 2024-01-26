@@ -1,0 +1,101 @@
+@use '../../stylesheets/variables' as *;
+@use '../../stylesheets/mixins' as *;
+
+@mixin Typography {
+  margin: 0;
+  color: $white;
+  font-weight: $bold;
+}
+
+@mixin RedHatDisplay_Typography {
+  @include Typography;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.primary {
+  &_h1 {
+    @include Typography;
+    font-size: $xxxxs-font-size; //14px
+    line-height: $m-line-height;
+    letter-spacing: $xs-letter-space;
+  }
+
+  &_h2 {
+    @include Typography;
+    font-size: $xl-font-size; // 50px
+    line-height: $l-line-height;
+    letter-spacing: $xs-letter-space;
+  }
+
+  &_h3 {
+    @include Typography;
+    font-size: $s-font-size; // 24px
+    line-height: $m-line-height;
+    letter-spacing: $xs-letter-space;
+  }
+
+  &_h4 {
+    @include Typography;
+    font-size: $xxxs-font-size; // 16px
+    line-height: $m-line-height;
+    letter-spacing: $xs-letter-space;
+  }
+
+  &_p {
+    @include Typography;
+    font-size: $l-font-size; // 28px
+    line-height: $m-line-height;
+    letter-spacing: $xs-letter-space;
+  }
+
+  &_span {
+    @include RedHatDisplay_Typography;
+    font-size: $s-font-size; // 24px
+    line-height: $m-line-height;
+    letter-spacing: $s-letter-space;
+  }
+}
+
+.secondary {
+  &_h2 {
+    @include RedHatDisplay_Typography;
+    font-weight: $bold;
+    font-size: $xxs-font-size; // 18px
+    line-height: $m-line-height;
+    letter-spacing: $l-letter-space;
+  }
+
+  &_p {
+    @include RedHatDisplay_Typography;
+    font-weight: $semiBold;
+    font-size: $l-font-size; // 28px
+    line-height: $xl-line-height;
+    letter-spacing: $l-letter-space;
+  }
+
+  &_span {
+    @include RedHatDisplay_Typography;
+    font-weight: $regular;
+    font-size: $xxs-font-size; // 18px
+    line-height: $l-line-height;
+    letter-spacing: $l-letter-space;
+  }
+}
+
+.color {
+  &_black {
+    color: $black;
+  }
+
+  &_gray {
+    color: $gray;
+  }
+
+  &_darkGray {
+    color: $dark-gray;
+  }
+
+  &_violet {
+    color: $violet;
+  }
+}
