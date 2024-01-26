@@ -1,17 +1,21 @@
 import { FC, ReactNode } from 'react';
 import cn from 'classnames';
+
 import style from './typography.module.scss';
 
 type Props = {
   /**
-   * тэг-обёртка `'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'`
+   * тэг-обёртка `'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span'`
    */
-  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
+  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span';
   children: ReactNode;
   /**
    * класс для дополнительной стилизации компонента
    */
-  className?: string;
+  extraClass?: string;
+  /**
+   * Обозначаем, какой цвет текста. По умолчанию 'white'
+   */
   color?: 'black' | 'gray' | 'darkGray' | 'violet';
   /**
    * `primary` === `Syncopate`, `secondary` === `Red Hat Display`
@@ -22,14 +26,14 @@ type Props = {
 /**
  * Компонент-обёртка для текстовых элементов
  * @example
- * <Typography tag="h3" fontFamily="syncopate">
+ * <Typography tag="h3" color="black" fontFamily="secondary" >
  *  Выводимый текст
  * </Typography>
  */
 const Typography: FC<Props> = ({
   tag,
   children,
-  className,
+  extraClass,
   color,
   fontFamily = 'primary',
 }) => {
@@ -39,8 +43,8 @@ const Typography: FC<Props> = ({
     <Tag
       className={cn(
         style[`${fontFamily}_${tag}`],
-        className,
-        color ? style[`color_${color}`] : ''
+        color ? style[`color_${color}`] : '',
+        extraClass
       )}
     >
       {children}

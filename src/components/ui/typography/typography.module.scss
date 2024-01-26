@@ -59,7 +59,6 @@
 .secondary {
   &_h2 {
     @include RedHatDisplay_Typography;
-    font-weight: $bold;
     font-size: $xxs-font-size; // 18px
     line-height: $m-line-height;
     letter-spacing: $l-letter-space;
