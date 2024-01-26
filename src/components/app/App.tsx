@@ -1,10 +1,19 @@
-import styles from './App.module.scss';
+import { Route, Routes } from 'react-router-dom';
+
+import routesUrl from '../../utils/routes/routesUrl';
+
+import Layout from '../layout/layout';
+import Referrals from '../../pages/referrals/referrals';
+import NotFound from '../../pages/not-found';
 
 function App() {
   return (
-    <>
-      <h1 className={styles.title}>{'Hello'}</h1>
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path={routesUrl.referrals} element={<Referrals />} />
+      </Route>
+      <Route path={routesUrl.notFound} element={<NotFound />} />
+    </Routes>
   );
 }
 

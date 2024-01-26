@@ -1,6 +1,0 @@
-@import '../../stylesheets/variables.scss';
-@import '../../stylesheets/mixins';
-
-.title {
-  @include font('Red Hat Display', $xxxl-font-size, $bold, $xl-line-height, $l-letter-space);
-}
