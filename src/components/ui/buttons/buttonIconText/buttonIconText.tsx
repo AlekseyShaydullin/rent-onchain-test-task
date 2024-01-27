@@ -12,9 +12,13 @@ interface IButtonIconText {
    */
   icon?: string;
   /**
-   * Укажите тег title: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span'
+   * Укажите тег title: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'span';
    */
-  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span';
+  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'span';
+  /**
+   * Укажите Font Family
+   * */
+  fontFamily: 'primary' | 'secondary';
   /**
    * Укажите название кнопки
    * */
@@ -59,6 +63,7 @@ type Ref = HTMLButtonElement;
  * <ButtonIconText
  *    icon="chevron"
  *    tag="h2"
+ *    fontFamily={'primary'}
  *    title="Название кнопки"
  *    isColored={true}
  *    buttonClass={style.button}
@@ -75,6 +80,7 @@ const ButtonIconText = forwardRef<Ref, IButtonIconText>(
     {
       icon,
       tag,
+      fontFamily,
       title,
       buttonClass,
       iconClass,
@@ -97,19 +103,34 @@ const ButtonIconText = forwardRef<Ref, IButtonIconText>(
         {icon && isColored ? (
           <>
             {!iconFirst && (
-              <Typography tag={tag} extraClass={titleClass} color={color}>
+              <Typography
+                tag={tag}
+                fontFamily={fontFamily}
+                extraClass={titleClass}
+                color={color}
+              >
                 {title}
               </Typography>
             )}
             <Icon name={icon} isColored={isColored} extraClass={iconClass} />
             {iconFirst && (
-              <Typography tag={tag} extraClass={titleClass} color={color}>
+              <Typography
+                tag={tag}
+                fontFamily={fontFamily}
+                extraClass={titleClass}
+                color={color}
+              >
                 {title}
               </Typography>
             )}
           </>
         ) : (
-          <Typography tag={tag} extraClass={titleClass} color={color}>
+          <Typography
+            tag={tag}
+            fontFamily={fontFamily}
+            extraClass={titleClass}
+            color={color}
+          >
             {title}
           </Typography>
         )}

@@ -6,6 +6,11 @@
   font-weight: $bold;
 }
 
+@mixin Syncopate_Typography {
+  @include Typography;
+  font-family: 'Syncopate', sans-serif;
+}
+
 @mixin RedHatDisplay_Typography {
   @include Typography;
   font-family: 'Red Hat Display', sans-serif;
@@ -13,42 +18,50 @@
 
 .primary {
   &_h1 {
-    @include Typography;
+    @include Syncopate_Typography;
     font-size: $xxxxs-font-size; //14px
     line-height: $m-line-height;
     letter-spacing: $xs-letter-space;
   }
 
   &_h2 {
-    @include Typography;
+    @include Syncopate_Typography;
     font-size: $xl-font-size; // 50px
     line-height: $l-line-height;
     letter-spacing: $xs-letter-space;
   }
 
   &_h3 {
-    @include Typography;
+    @include Syncopate_Typography;
     font-size: $s-font-size; // 24px
     line-height: $m-line-height;
     letter-spacing: $xs-letter-space;
   }
 
   &_h4 {
-    @include Typography;
+    @include Syncopate_Typography;
+    font-size: $xxs-font-size; // 18px
+    line-height: $l-line-height;
+    letter-spacing: $xs-letter-space;
+  }
+
+  &_h5 {
+    @include Syncopate_Typography;
     font-size: $xxxs-font-size; // 16px
     line-height: $m-line-height;
     letter-spacing: $xs-letter-space;
   }
 
+
   &_p {
-    @include Typography;
+    @include Syncopate_Typography;
     font-size: $l-font-size; // 28px
     line-height: $m-line-height;
     letter-spacing: $xs-letter-space;
   }
 
   &_span {
-    @include RedHatDisplay_Typography;
+    @include Syncopate_Typography;
     font-size: $s-font-size; // 24px
     line-height: $m-line-height;
   }

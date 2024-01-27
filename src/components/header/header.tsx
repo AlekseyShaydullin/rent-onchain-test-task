@@ -27,6 +27,8 @@ const Header: FC = (): JSX.Element => {
           </Typography>
         </div>
         <DropdownMenu
+          tag={'span'}
+          fontFamily={'primary'}
           option={menuMore}
           iconClass={cn(style.icon, style.icon_color_gray)}
           titleClass={style.titleMore}
@@ -35,6 +37,8 @@ const Header: FC = (): JSX.Element => {
       </div>
       <div className={style.settingsBlock}>
         <DropdownMenu
+          tag={'span'}
+          fontFamily={'primary'}
           option={menuLanguages}
           iconClass={cn(style.icon, style.icon_color_white)}
           titleClass={style.titleLanguage}
@@ -43,12 +47,14 @@ const Header: FC = (): JSX.Element => {
         <div className={style.buttons}>
           <ButtonIconText
             tag={'h4'}
+            fontFamily={'primary'}
             title={'€'}
             buttonClass={style.button}
             color={'black'}
           />
           <ButtonIconText
             tag={'h4'}
+            fontFamily={'primary'}
             title={'$'}
             buttonClass={style.button}
             color={'black'}

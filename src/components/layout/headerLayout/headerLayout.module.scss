@@ -1,0 +1,46 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.headerLayout {
+  @include flex(row, space-between, center);
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 0;
+  border-bottom: 1px solid rgb(95,79,100, .3);
+}
+
+.navWrapper {
+  @include flex(row, center, center, 36px);
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+.titleClass {
+  &:hover {
+    color: $gray;
+  }
+}
+
+.icon {
+  @include size(32px, 32px);
+
+  &_color_gray {
+    color: $gray;
+  }
+
+  &_color_white {
+    color: $white;
+  }
+}
+
+.button.button {
+  @include flex(row, center, center);
+  max-width: 181px;
+  width: 100%;
+  padding: 20px 0;
+  background-color: $violet;
+  border-radius: 6px;
+}

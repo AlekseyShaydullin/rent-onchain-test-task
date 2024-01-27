@@ -8,6 +8,8 @@ import Menu from '../ui/menu/menu';
 import { IOptions } from '../../utils/types/common';
 
 interface IDropdownMenu {
+  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'span';
+  fontFamily: 'primary' | 'secondary';
   option: Array<IOptions>;
   iconClass: string;
   titleClass: string;
@@ -15,6 +17,8 @@ interface IDropdownMenu {
 }
 
 const DropdownMenu: FC<IDropdownMenu> = ({
+  tag,
+  fontFamily,
   option,
   iconClass,
   titleClass,
@@ -47,7 +51,8 @@ const DropdownMenu: FC<IDropdownMenu> = ({
     <div className={style.dropdownMenu}>
       <ButtonIconText
         icon="chevron"
-        tag="span"
+        tag={tag}
+        fontFamily={fontFamily}
         title={titleMenuMore!.value}
         iconClass={cn(!showDropDown ? style.icon : style.iconOpen, iconClass)}
         titleClass={titleClass}
