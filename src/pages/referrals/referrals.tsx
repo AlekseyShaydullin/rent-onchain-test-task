@@ -1,10 +1,11 @@
 import { FC } from 'react';
+import Sidebar from '../../components/sidebar/sidebar';
 
 const Referrals: FC = (): JSX.Element => {
   return (
     <>
       <div>
-        <h1>{'Referrals'}</h1>
+        <Sidebar />
       </div>
     </>
   );
