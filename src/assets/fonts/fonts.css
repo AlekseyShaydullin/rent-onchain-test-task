@@ -21,6 +21,13 @@
 
 @font-face {
   font-family: 'Red Hat Display';
+  font-weight: 500;
+  src:
+    url('./RedHatDisplay/RedHatDisplay-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
   font-weight: 400;
   src:
     url('./RedHatDisplay/RedHatDisplay-Regular.ttf') format('truetype');

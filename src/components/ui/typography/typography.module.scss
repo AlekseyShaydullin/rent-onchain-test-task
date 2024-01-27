@@ -1,9 +1,8 @@
-@use '../../stylesheets/variables' as *;
-@use '../../stylesheets/mixins' as *;
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
 
 @mixin Typography {
   margin: 0;
-  color: $white;
   font-weight: $bold;
 }
 
@@ -52,7 +51,6 @@
     @include RedHatDisplay_Typography;
     font-size: $s-font-size; // 24px
     line-height: $m-line-height;
-    letter-spacing: $s-letter-space;
   }
 }
 
@@ -77,11 +75,14 @@
     font-weight: $regular;
     font-size: $xxs-font-size; // 18px
     line-height: $l-line-height;
-    letter-spacing: $l-letter-space;
   }
 }
 
 .color {
+  &_white {
+    color: $white;
+  }
+
   &_black {
     color: $black;
   }

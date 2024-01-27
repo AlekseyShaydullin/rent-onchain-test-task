@@ -26,7 +26,13 @@ type Props = {
 /**
  * Компонент-обёртка для текстовых элементов
  * @example
- * <Typography tag="h3" color="black" fontFamily="secondary" >
+ * <Typography
+ *   tag="h3"
+ *   color="black"
+ *   fontFamily="secondary"
+ *   extraClass={titleClass}
+ *   color={'black'}
+ * >
  *  Выводимый текст
  * </Typography>
  */
@@ -34,7 +40,7 @@ const Typography: FC<Props> = ({
   tag,
   children,
   extraClass,
-  color,
+  color = 'white',
   fontFamily = 'primary',
 }) => {
   const Tag = tag;
@@ -43,7 +49,7 @@ const Typography: FC<Props> = ({
     <Tag
       className={cn(
         style[`${fontFamily}_${tag}`],
-        color ? style[`color_${color}`] : '',
+        color ? style[`color_${color}`] : ' ',
         extraClass
       )}
     >

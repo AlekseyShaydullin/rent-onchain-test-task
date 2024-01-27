@@ -1,0 +1,55 @@
+@use '../../stylesheets/variables.scss' as *;
+@use '../../stylesheets/mixins' as *;
+
+.header {
+  @include flex(row, space-between, center);
+  max-width: 1440px;
+  width: 100%;
+  margin: 24px auto;
+}
+
+.logoBlock {
+  @include flex(row, center, center, 36px);
+}
+
+.logoTitle {
+  @include flex(row, center, center, 8px);
+}
+
+.logo {
+  @include size(44px, 48px);
+}
+
+.icon {
+  @include size(32px, 32px);
+
+  &_color_gray {
+    color: $gray;
+  }
+
+  &_color_white {
+    color: $white;
+  }
+}
+
+.titleMore.titleMore {
+  @include font('Red Hat Display', $xxs-font-size, $medium, $l-line-height, $l-letter-space, $gray);
+}
+
+.settingsBlock {
+  @include flex(row, center, center, 48px);
+}
+
+.titleLanguage.titleLanguage {
+  @include font('Red Hat Display', $xxs-font-size, $bold, $m-line-height, $l-letter-space, $white);
+}
+
+.buttons {
+  @include flex(row, center, center, 16px);
+}
+
+.button.button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: $white;
+}

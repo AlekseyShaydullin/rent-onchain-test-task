@@ -1,0 +1,15 @@
+@use '../../stylesheets/variables.scss' as *;
+@use '../../stylesheets/mixins' as *;
+
+.dropdownMenu {
+  @include flex(column, center, center);
+}
+
+.icon {
+  transform: rotate(180deg);
+
+  &_open {
+    transform: rotate(0);
+  }
+}
+

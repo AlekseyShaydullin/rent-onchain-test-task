@@ -1,0 +1,28 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.item {
+  @include flex(row, space-between, center);
+  @include font('Red Hat Display', $xxxs-font-size, $medium, $l-line-height, $l-letter-space, $white);
+  width: 74px;
+  box-sizing: border-box;
+  padding: 2px 4px;
+  transition: all 0.1s linear;
+
+  &:first-child:hover {
+    border-radius: 4px;
+  }
+
+  &:last-child:hover {
+    border-radius: 4px;
+  }
+
+  &:hover {
+    cursor: $cursor;
+    background-color: $gray;
+  }
+}
+
+div.check {
+  color: $blue;
+}
