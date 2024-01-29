@@ -15,6 +15,10 @@ const HeaderLayout: FC = (): JSX.Element => {
 
   console.log(help);
 
+  const getAccess = () => {
+    console.log('ACCESS');
+  };
+
   return (
     <section className={style.headerLayout}>
       <div className={style.navWrapper}>
@@ -48,6 +52,7 @@ const HeaderLayout: FC = (): JSX.Element => {
         fontFamily={'primary'}
         title={'ACCESS'}
         buttonClass={style.button}
+        onClick={getAccess}
       />
     </section>
   );

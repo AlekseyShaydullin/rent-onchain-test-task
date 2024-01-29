@@ -1,0 +1,17 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.contacts {
+  @include flex(column, center, flex-start);
+  width: 381px;
+}
+
+.office {
+  @include flex(column, center, flex-start, 8px);
+  padding-top: 16px;
+}
+
+.titleAddress {
+  font-weight: $regular;
+  text-align: left;
+}

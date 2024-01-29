@@ -75,11 +75,18 @@
     letter-spacing: $l-letter-space;
   }
 
+  &_h3 {
+    @include RedHatDisplay_Typography;
+    font-size: $m-font-size; // 26px
+    line-height: $m-line-height;
+    letter-spacing: $l-letter-space;
+  }
+
   &_p {
     @include RedHatDisplay_Typography;
     font-weight: $semiBold;
     font-size: $l-font-size; // 28px
-    line-height: $xl-line-height;
+    line-height: $m-line-height;
     letter-spacing: $l-letter-space;
   }
 

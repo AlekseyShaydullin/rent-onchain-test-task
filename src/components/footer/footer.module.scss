@@ -1,0 +1,46 @@
+@use '../../stylesheets/variables.scss' as *;
+@use '../../stylesheets/mixins' as *;
+
+.footer {
+  @include flex(row, space-between, flex-start);
+  padding: 100px 240px 38px;
+  background: $white;
+  border-top-right-radius: 28px;
+  border-top-left-radius: 28px;
+}
+
+.information {
+  @include flex(column, space-between, flex-start, 287px);
+}
+
+.basic {
+  @include flex(row, center, flex-start, 114px);
+}
+
+.secondary {
+  @include flex(row, center, flex-start, 88px);
+}
+
+.formBlock {
+  @include flex(column, center, flex-start);
+  width: 539px;
+}
+
+.formLinks {
+  @include flex(row, space-between, flex-start);
+  width: 539px;
+  padding: 120px 0 38px;
+
+}
+
+.link {
+  @include font('Red Hat Display', $xxs-font-size, $regular, $l-line-height, $color: $black);
+  text-decoration: none;
+  border-bottom: 1px solid $black;
+
+  &:hover {
+    cursor: $cursor;
+    color: $gray;
+    border-bottom: 1px solid $gray;
+  }
+}

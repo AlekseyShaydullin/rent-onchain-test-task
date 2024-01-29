@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { FormEvent, forwardRef } from 'react';
 import cn from 'classnames';
 
 import style from './buttonIconText.module.scss';
@@ -40,7 +40,7 @@ interface IButtonIconText {
   /**
    * Обозначаем, какой цвет текста. По умолчанию 'white'
    */
-  color?: 'black' | 'gray' | 'darkGray' | 'violet';
+  color?: 'black' | 'gray' | 'darkGray' | 'violet' | 'white';
   /**
    * Можно управлять стилизацией. Иконка первая? тогда пиши true
    * */
@@ -48,7 +48,7 @@ interface IButtonIconText {
   /**
    * callback при клике на кнопку
    */
-  onClick?: () => void;
+  onClick?: (e: FormEvent<HTMLButtonElement>) => void | (() => void);
   /**
    * ID кнопки
    */

@@ -1,0 +1,54 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.checkbox {
+  position: relative;
+}
+
+@mixin Сheckbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.customСheckbox{
+  @include Сheckbox;
+}
+
+.customСheckboxDone{
+  @include Сheckbox;
+}
+
+.cust {
+  @include size(32px, 32px);
+  display: block;
+  border: 4px solid $black;
+  border-radius: 8px;
+  background-color: $white;
+  box-sizing: border-box;
+  cursor: $cursor;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    @include size(0, 0);
+    border: solid $black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: width .3s, height .3s, opacity .3s;
+  }
+}
+
+.customСheckboxDone:checked + .cust::after {
+  @include size(7px, 15px);
+  opacity: 1;
+}
+
+.customСheckboxDone:checked + .cust {
+  border: 3px solid $black;
+  background-color: $white;
+}

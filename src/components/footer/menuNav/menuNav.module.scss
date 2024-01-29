@@ -1,0 +1,26 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.menu {
+  @include flex(column, center, flex-start);
+  width: 246px;
+}
+
+.nav {
+  @include flex(column, center, flex-start, 8px);
+  padding-top: 16px;
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+.titleNav {
+  font-size: $m-font-size; // 26px
+  line-height: $m-line-height;
+  letter-spacing: $l-letter-space;
+
+  &:hover {
+    color: $gray;
+  }
+}

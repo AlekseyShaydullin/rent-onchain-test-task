@@ -1,0 +1,55 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.form {
+  @include flex(column, center, flex-start, 20px);
+  padding-top: 42px;
+}
+
+.text {
+  text-transform: uppercase;
+  text-align: left
+}
+
+.input {
+  @include font('Red Hat Display', $xxxs-font-size, $medium, $l-line-height, $color: $gray);
+  width: 539px;
+  padding: 0 0 6px;
+  margin: 0;
+  outline: 0;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  border-bottom: 1px solid $dark-gray;
+}
+
+.privacy {
+  @include flex(row, center, center, 8px);
+}
+
+.privacyText {
+  font-weight: $medium;
+
+  &_underline {
+    border-bottom: 1px solid $black;
+
+    &:hover {
+      cursor: $cursor;
+      color: $gray;
+      border-bottom: 1px solid $gray;
+    }
+  }
+}
+
+.button {
+  @include flex(row, center, center);
+  width: 539px;
+  margin-top: 12px;
+  padding: 32px 0;
+  border-radius: 12px;
+  background: $violet;
+}
+
+.titleButton {
+  @include font('Syncopate', $xs-font-size, $bold, $m-line-height, $xs-letter-space, $white);
+}

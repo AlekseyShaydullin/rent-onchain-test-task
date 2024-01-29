@@ -9,3 +9,13 @@ export interface IOptions {
   value: string;
   icon?: string;
 }
+
+export interface IOptionsContacts {
+  title: string;
+  description: string;
+}
+
+export interface IOptionsNav {
+  link: string;
+  title: string;
+}
