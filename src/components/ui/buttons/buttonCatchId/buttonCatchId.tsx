@@ -1,12 +1,12 @@
-import { FormEvent, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import cn from 'classnames';
 
-import style from './buttonIconText.module.scss';
+import style from './buttonCatchId.module.scss';
 
 import Icon from '../../icon/icon';
 import Typography from '../../typography/typography';
 
-interface IButtonIconText {
+interface IButtonCatchId {
   /**
    * Укажите название файла иконки, без его расширения
    */
@@ -48,13 +48,11 @@ interface IButtonIconText {
   /**
    * callback при клике на кнопку
    */
-  onClick?: (
-    e: FormEvent<HTMLButtonElement>
-  ) => void | (() => void) | ((id: string) => void);
+  onClick: (id: string) => void;
   /**
    * ID кнопки
    */
-  id?: string;
+  id: string;
 }
 
 type Ref = HTMLButtonElement;
@@ -77,7 +75,7 @@ type Ref = HTMLButtonElement;
  *    id={id}
  * />
  */
-const ButtonIconText = forwardRef<Ref, IButtonIconText>(
+const ButtonCatchId = forwardRef<Ref, IButtonCatchId>(
   (
     {
       icon,
@@ -98,7 +96,7 @@ const ButtonIconText = forwardRef<Ref, IButtonIconText>(
     return (
       <button
         className={cn(style[`button`], buttonClass)}
-        onClick={onClick}
+        onClick={() => onClick(id)}
         ref={ref}
         id={id}
       >
@@ -141,4 +139,4 @@ const ButtonIconText = forwardRef<Ref, IButtonIconText>(
   }
 );
 
-export default ButtonIconText;
+export default ButtonCatchId;

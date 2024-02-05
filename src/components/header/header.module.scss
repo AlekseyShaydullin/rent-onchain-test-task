@@ -2,12 +2,15 @@
 @use '../../stylesheets/mixins' as *;
 
 .header {
+  border-bottom: 1px solid rgb(95,79,100, .3);
+}
+
+.wrapper {
   @include flex(row, space-between, center);
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   padding: 24px 0;
-  border-bottom: 1px solid rgb(95,79,100, .3);
 }
 
 .logoBlock {
@@ -16,6 +19,7 @@
 
 .logoTitle {
   @include flex(row, center, center, 8px);
+  text-decoration: none;
 }
 
 .logo {
@@ -53,9 +57,20 @@
 }
 
 .button.button {
+  @include size(32px, 32px);
   padding: 4px 8px;
   border-radius: 4px;
-  background: $white;
+  background: $gray;
+  position: relative;
+
+  &_active {
+    background: $white;
+  }
+}
+
+.buttonTitle {
+  position: absolute;
+  bottom: 3px;
 }
 
 .dropdown {

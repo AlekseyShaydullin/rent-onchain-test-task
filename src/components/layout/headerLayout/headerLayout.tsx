@@ -21,40 +21,42 @@ const HeaderLayout: FC = (): JSX.Element => {
 
   return (
     <section className={style.headerLayout}>
-      <div className={style.navWrapper}>
-        {optionsNav.map((option, index) => {
-          return (
-            <NavLink to={option.link} className={style.navLink} key={index}>
-              <Typography
-                tag={'h4'}
-                fontFamily={'primary'}
-                extraClass={style.titleClass}
-                color={'white'}
-              >
-                {option.title}
-              </Typography>
-            </NavLink>
-          );
-        })}
-        <NavLink to={'/'} className={style.navLink}>
-          <DropdownMenu
-            tag={'h4'}
-            fontFamily={'primary'}
-            option={optionsHelp}
-            iconClass={cn(style.icon, style.icon_color_white)}
-            titleClass={style.titleClass}
-            setDropdown={setHelp}
-            dropdownClass={cn(style.dropdown, style.dropdown__help)}
-          />
-        </NavLink>
+      <div className={style.wrapper}>
+        <div className={style.navWrapper}>
+          {optionsNav.map((option, index) => {
+            return (
+              <NavLink to={option.link} className={style.navLink} key={index}>
+                <Typography
+                  tag={'h4'}
+                  fontFamily={'primary'}
+                  extraClass={style.titleClass}
+                  color={'white'}
+                >
+                  {option.title}
+                </Typography>
+              </NavLink>
+            );
+          })}
+          <NavLink to={'/'} className={style.navLink}>
+            <DropdownMenu
+              tag={'h4'}
+              fontFamily={'primary'}
+              option={optionsHelp}
+              iconClass={cn(style.icon, style.icon_color_white)}
+              titleClass={style.titleClass}
+              setDropdown={setHelp}
+              dropdownClass={cn(style.dropdown, style.dropdown__help)}
+            />
+          </NavLink>
+        </div>
+        <ButtonIconText
+          tag={'h5'}
+          fontFamily={'primary'}
+          title={'ACCESS'}
+          buttonClass={style.button}
+          onClick={getAccess}
+        />
       </div>
-      <ButtonIconText
-        tag={'h5'}
-        fontFamily={'primary'}
-        title={'ACCESS'}
-        buttonClass={style.button}
-        onClick={getAccess}
-      />
     </section>
   );
 };

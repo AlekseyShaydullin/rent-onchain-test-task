@@ -2,12 +2,17 @@
 @use '../../../stylesheets/mixins' as *;
 
 .headerLayout {
-  @include flex(row, space-between, center);
+  border-bottom: 1px solid rgb(95,79,100, .3);
+  border-bottom-right-radius: 28px;
+  border-bottom-left-radius: 28px
+}
+
+.wrapper {
+    @include flex(row, space-between, center);
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   padding: 24px 0;
-  border-bottom: 1px solid rgb(95,79,100, .3);
 }
 
 .navWrapper {

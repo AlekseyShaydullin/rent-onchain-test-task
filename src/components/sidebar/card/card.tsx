@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import cn from 'classnames';
 
 import style from './card.module.scss';
 
@@ -27,11 +28,21 @@ const Card: FC<ICard> = ({ options }): JSX.Element => {
           return (
             <li className={style.field} key={index}>
               <NavLink to={'/'} className={style.nav}>
-                <Icon name={field.icon} isColored extraClass={style.icon} />
+                <Icon
+                  name={field.icon}
+                  isColored
+                  extraClass={cn(
+                    style.icon,
+                    field.currentPage && style.icon_active
+                  )}
+                />
                 <Typography
                   tag={'p'}
                   fontFamily={'secondary'}
-                  extraClass={style.fieldTitle}
+                  extraClass={cn(
+                    style.fieldTitle,
+                    field.currentPage && style.fieldTitle_active
+                  )}
                   color={'white'}
                 >
                   {field.title}

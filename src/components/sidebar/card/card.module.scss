@@ -29,6 +29,10 @@
 }
 
 .fieldTitle {
+  &_active {
+    color: $violet;
+  }
+
   &:hover {
     color: $gray;
   }
@@ -37,6 +41,10 @@
 .icon {
   @include size(30px, 30px);
   color: $white;
+
+  &_active {
+    color: $violet;
+  }
 }
 
 .approvedWrapper {
