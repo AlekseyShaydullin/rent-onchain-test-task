@@ -1,0 +1,18 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.badge {
+  @include flex();
+  position: relative;
+}
+
+.wrapper {
+  @include flex(row, center, center);
+
+}
+
+.color {
+  &_violet {
+    background: $violet;
+  }
+}

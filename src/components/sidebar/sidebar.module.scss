@@ -34,3 +34,17 @@
   resize: none;
   overflow: hidden;
 }
+
+.wrapperBadge {
+  @include size(20px, 20px);
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 17px;
+}
+
+.badge__title {
+  @include font('Roboto', $xxxxs-font-size, $medium, $m-line-height);
+}
+
+

@@ -2,11 +2,11 @@ import { ChangeEvent, FC, useState } from 'react';
 
 import style from './sidebar.module.scss';
 
-import Icon from '../ui/icon/icon';
 import ButtonIcon from '../ui/buttons/buttonIcon/buttonIcon';
 import Typography from '../ui/typography/typography';
 import { optionsCard } from './cardConfig';
 import Card from './card/card';
+import Badge from '../ui/badge/badge';
 
 const Sidebar: FC = (): JSX.Element => {
   const [valueInput, setValueInput] = useState<string>('0x454657···7897');
@@ -51,7 +51,16 @@ const Sidebar: FC = (): JSX.Element => {
             id={'input'}
           />
         </label>
-        <Icon name={'notifications'} isColored extraClass={style.icon} />
+        <Badge
+          title={'3'}
+          titleClass={style.badge__title}
+          colorTitle={'white'}
+          wrapperClass={style.wrapperBadge}
+          backgroundColor={'violet'}
+          icon={'notifications'}
+          iconClass={style.icon}
+          isColored
+        />
       </div>
       <div className={style.cards}>
         {optionsCard.map((options, index) => {

@@ -39,3 +39,10 @@
   src:
     url('./RedHatDisplay/RedHatDisplay-Light.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  src:
+    url('./Roboto/Roboto-Medium.ttf') format('truetype');
+}

@@ -16,7 +16,7 @@ type Props = {
   /**
    * Обозначаем, какой цвет текста. По умолчанию 'white'
    */
-  color?: 'black' | 'gray' | 'darkGray' | 'violet' | 'white';
+  color?: 'black' | 'gray' | 'darkGray' | 'violet' | 'white' | string;
   /**
    * `primary` === `Syncopate`, `secondary` === `Red Hat Display`
    */
@@ -48,7 +48,7 @@ const Typography: FC<Props> = ({
     <Tag
       className={cn(
         style[`${fontFamily}_${tag}`],
-        color ? style[`color_${color}`] : ' ',
+        color && style[`color_${color}`],
         extraClass
       )}
     >
