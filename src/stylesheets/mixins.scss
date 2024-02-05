@@ -59,13 +59,12 @@
 }
 
 /* Свойства шрифта и строки */
-@mixin font($font-family, $font-size: inherit, $font-weight: inherit, $line-height: inherit, $letter-spacing: inherit, $color: inherit){
+@mixin font($font-family, $font-size: inherit, $font-weight: inherit, $line-height: inherit, $letter-spacing: inherit){
   font-family: $font-family, sans-serif;
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
   letter-spacing: $letter-spacing;
-  color: $color;
 };
 
 /* Сброс стиля кнопок и единый курсор */

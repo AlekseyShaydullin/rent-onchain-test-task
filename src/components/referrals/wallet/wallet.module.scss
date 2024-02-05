@@ -1,0 +1,11 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.wallet {
+  @include flex(row, space-between, center);
+  width: 676px;
+
+  &__text {
+    @include font('Red Hat Display', $s-font-size, $semiBold, $xl-line-height, $l-letter-space);
+  }
+}

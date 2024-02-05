@@ -1,0 +1,15 @@
+@use '../../stylesheets/variables.scss' as *;
+@use '../../stylesheets/mixins' as *;
+
+.referrals {
+  @include flex(column, flex-start, flex-start, $gap: 42px);
+  padding-top: 33px;
+}
+
+.cards {
+  @include flex(column, flex-start, flex-start, $gap: 24px);
+}
+
+.results {
+  @include flex($gap: 24px);
+}

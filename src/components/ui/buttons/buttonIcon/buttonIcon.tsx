@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { FormEvent, forwardRef } from 'react';
 import cn from 'classnames';
 
 import style from './buttonIcon.module.scss';
@@ -25,7 +25,7 @@ interface IButtonIcon {
   /**
    * callback при клике на кнопку
    */
-  onClick?: () => void;
+  onClick?: (e: FormEvent<HTMLButtonElement>) => void | (() => void);
   /**
    * ID кнопки
    */

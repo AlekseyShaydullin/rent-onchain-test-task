@@ -4,7 +4,7 @@ import style from './footer.module.scss';
 
 import Contacts from './contacts/contacts';
 import MenuNav from './menuNav/menuNav';
-import FormFooter from './formFooter/formFooter';
+import FormFooter from '../ui/forms/formFooter/formFooter';
 
 import { optionsContacts, optionsNav } from './config';
 import Typography from '../ui/typography/typography';

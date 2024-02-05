@@ -3,7 +3,8 @@
 
 .item {
   @include flex(row, space-between, center);
-  @include font('Red Hat Display', $xxxs-font-size, $medium, $l-line-height, $l-letter-space, $white);
+  @include font('Red Hat Display', $xxxs-font-size, $medium, $l-line-height, $l-letter-space);
+  color: $white;
   width: 74px;
   box-sizing: border-box;
   padding: 2px 4px;

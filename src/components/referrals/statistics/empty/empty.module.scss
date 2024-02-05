@@ -1,0 +1,10 @@
+@use '../../../../stylesheets/variables.scss' as *;
+@use '../../../../stylesheets/mixins' as *;
+
+.empty {
+  @include flex(column, center, center, 8px);
+
+  &__description {
+    @include font('Red Hat Display', $s-font-size, $semiBold, $xl-line-height, $xl-line-height);
+  }
+}

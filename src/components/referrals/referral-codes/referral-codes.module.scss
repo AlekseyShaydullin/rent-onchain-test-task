@@ -1,0 +1,29 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.codes {
+  @include flex(column, center, flex-start, 16px);
+  @include size(676px, 244px);
+  padding: 24px;
+  border-radius: 12px;
+  background: $white;
+}
+
+.titleCodes {
+  text-transform: uppercase;
+}
+
+.special {
+  @include flex(row, space-between, center);
+  width: 676px;
+
+  &__text {
+    @include font('Red Hat Display', $s-font-size, $semiBold, $xl-line-height, $l-letter-space);
+  }
+}
+
+.link {
+  @include font('Red Hat Display', $s-font-size, $semiBold, $xl-line-height, $l-letter-space);
+  color: $violet;
+  margin-top: 8px;
+}

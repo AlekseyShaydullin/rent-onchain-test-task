@@ -1,0 +1,70 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.report {
+  @include flex(row);
+
+  &_progeny {
+    cursor: $cursor;
+  }
+
+  &_referral:first-child {
+    padding-top: 16px;
+    border-top: 1px solid rgb(221, 221, 221, .3);
+  }
+
+  &_referral:last-child {
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgb(221, 221, 221, .3);
+  }
+
+  &__icon {
+    @include size (24px, 24px);
+    color: $dark-gray;
+    transform: rotate(180deg);
+
+    &_referral {
+      color: $white;
+    }
+
+    &_active {
+      transform: rotate(0);
+    }
+  }
+
+  &__img {
+    @include size (20px, 20px);
+    border-radius: 50%;
+  }
+
+  &__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &_referral {
+      padding-left: 32px;
+      color: $gray;
+    }
+  }
+}
+
+.wrapperTitle {
+  @include flex(row, flex-start, center, 8px);
+  width: 326px;
+  padding-right: 14px;
+}
+
+.wrapperValues {
+  @include flex(row, flex-start, center, 15px);
+  width: 365px;
+}
+
+.value {
+  width: 100px;
+  text-align: left;
+
+  &:last-child {
+    text-align: right;
+  }
+}

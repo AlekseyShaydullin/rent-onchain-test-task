@@ -1,0 +1,32 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.statistics {
+  @include flex(column, space-between);
+}
+
+.header {
+  @include flex($gap: 15px);
+  padding-bottom: 8px;
+  border-bottom: 1px solid $light-gray;
+
+  &__title {
+    text-transform: uppercase;
+  }
+}
+
+.wrapperTitle {
+  @include flex (row, flex-start, center);
+  width: 360px;
+}
+
+.values {
+  @include flex(row, space-between, center, 15px);
+  width: 349px;
+}
+
+.statistic {
+  @include flex(column, space-between, center);
+  height: 63vh;
+  margin-top: 16px;
+}

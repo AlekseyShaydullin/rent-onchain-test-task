@@ -1,0 +1,24 @@
+@use '../../../stylesheets/variables.scss' as *;
+@use '../../../stylesheets/mixins' as *;
+
+.referral {
+  @include flex(row, center, center, 8px);
+
+  &__number {
+    @include font('Red Hat Display', $xs-font-size, $regular, $xl-line-height, $l-letter-space);
+  }
+
+  &__icon {
+    @include size(28px, 28px);
+    color: $gray;
+
+    &:hover {
+      cursor: $cursor;
+      color: $black;
+    }
+  }
+}
+
+.icons {
+  @include flex();
+}

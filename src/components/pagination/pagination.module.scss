@@ -1,0 +1,47 @@
+@use '../../stylesheets/variables.scss' as *;
+@use '../../stylesheets/mixins' as *;
+
+.pagination {
+  @include flex();
+
+  &__icon {
+    @include size(72px, 72px);
+    color: $white;
+
+    &_start {
+      rotate: (180deg);
+    }
+
+    &_end {
+      rotate: (0);
+    }
+
+    &:hover {
+      cursor: $cursor;
+      color: $gray;
+    }
+  }
+
+  &__items {
+    @include flex($gap: 14px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include flex(row, center, center);
+    @include size(72px, 72px);
+    @include font('Red Hat Display', $m-font-size, $semiBold, $xl-line-height);
+    color: $dark-gray;
+
+    &_active {
+      color: $white;
+    }
+
+    &:hover {
+      cursor: $cursor;
+      color: $gray;
+    }
+  }
+}

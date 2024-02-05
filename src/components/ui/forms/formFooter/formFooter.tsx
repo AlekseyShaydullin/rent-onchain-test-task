@@ -3,9 +3,9 @@ import cn from 'classnames';
 
 import style from './formFooter.module.scss';
 
-import Checkbox from '../../ui/checkbox/checkbox';
-import Typography from '../../ui/typography/typography';
-import ButtonIconText from '../../ui/buttons/buttonIconText/buttonIconText';
+import Checkbox from '../../checkbox/checkbox';
+import Typography from '../../typography/typography';
+import ButtonIconText from '../../buttons/buttonIconText/buttonIconText';
 
 interface IForm {
   email: string;

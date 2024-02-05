@@ -1,0 +1,6 @@
+@use '../../stylesheets/variables.scss' as *;
+@use '../../stylesheets/mixins' as *;
+
+.wrapper {
+  @include flex(row, $gap: 30px)
+}

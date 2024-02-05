@@ -35,7 +35,8 @@
 }
 
 .titleMore.titleMore {
-  @include font('Red Hat Display', $xxs-font-size, $medium, $l-line-height, $l-letter-space, $gray);
+  @include font('Red Hat Display', $xxs-font-size, $medium, $l-line-height, $l-letter-space);
+  color: $gray;
 }
 
 .settingsBlock {
@@ -43,7 +44,8 @@
 }
 
 .titleLanguage.titleLanguage {
-  @include font('Red Hat Display', $xxs-font-size, $bold, $m-line-height, $l-letter-space, $white);
+  @include font('Red Hat Display', $xxs-font-size, $bold, $m-line-height, $l-letter-space);
+  color: $white;
 }
 
 .buttons {

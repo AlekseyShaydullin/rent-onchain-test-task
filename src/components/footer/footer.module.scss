@@ -34,7 +34,8 @@
 }
 
 .link {
-  @include font('Red Hat Display', $xxs-font-size, $regular, $l-line-height, $color: $black);
+  @include font('Red Hat Display', $xxs-font-size, $regular, $l-line-height);
+  color: $black;
   text-decoration: none;
   border-bottom: 1px solid $black;
 
