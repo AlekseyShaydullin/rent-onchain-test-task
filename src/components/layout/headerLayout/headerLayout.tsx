@@ -44,6 +44,7 @@ const HeaderLayout: FC = (): JSX.Element => {
             iconClass={cn(style.icon, style.icon_color_white)}
             titleClass={style.titleClass}
             setDropdown={setHelp}
+            dropdownClass={cn(style.dropdown, style.dropdown__help)}
           />
         </NavLink>
       </div>

@@ -33,6 +33,7 @@ const Header: FC = (): JSX.Element => {
           iconClass={cn(style.icon, style.icon_color_gray)}
           titleClass={style.titleMore}
           setDropdown={setMore}
+          dropdownClass={cn(style.dropdown, style.dropdown__more)}
         />
       </div>
       <div className={style.settingsBlock}>
@@ -43,6 +44,7 @@ const Header: FC = (): JSX.Element => {
           iconClass={cn(style.icon, style.icon_color_white)}
           titleClass={style.titleLanguage}
           setDropdown={setLanguage}
+          dropdownClass={cn(style.dropdown, style.dropdown__languages)}
         />
         <div className={style.buttons}>
           <ButtonIconText

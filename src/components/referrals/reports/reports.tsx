@@ -1,4 +1,4 @@
-import { FC, Fragment, useState } from 'react';
+import { FC, Fragment, useCallback, useState } from 'react';
 import cn from 'classnames';
 
 import style from './reports.module.scss';
@@ -17,15 +17,18 @@ const Reports: FC<IReports> = ({ reports }): JSX.Element => {
     return report.referral.length !== 0 ? true : false;
   };
 
-  const setAccordionState = (id: number) => {
-    if (accordion === id) {
-      setAccordion(-1);
-      setActiveAccordion(!isActiveAccordion);
-      return;
-    }
-    setAccordion(id);
-    setActiveAccordion(true);
-  };
+  const setAccordionState = useCallback(
+    (id: number) => {
+      if (accordion === id) {
+        setAccordion(-1);
+        setActiveAccordion(!isActiveAccordion);
+        return;
+      }
+      setAccordion(id);
+      setActiveAccordion(true);
+    },
+    [accordion, isActiveAccordion]
+  );
 
   return (
     <div className={style.reports}>

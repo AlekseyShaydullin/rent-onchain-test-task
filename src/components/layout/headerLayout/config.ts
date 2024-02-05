@@ -10,5 +10,4 @@ export const optionsHelp = [
   { label: 'HELP', value: 'HELP' },
   { label: 'HELP01', value: 'HELP01' },
   { label: 'HELP02', value: 'HELP02' },
-  { label: 'HELP03', value: 'HELP03' },
 ];

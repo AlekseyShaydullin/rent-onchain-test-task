@@ -3,6 +3,7 @@
 
 .dropdownMenu {
   @include flex(column, center, center);
+  position: relative;
 }
 
 .icon {

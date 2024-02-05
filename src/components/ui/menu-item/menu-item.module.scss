@@ -19,6 +19,7 @@
   }
 
   &:hover {
+    width: inherit;
     cursor: $cursor;
     background-color: $gray;
   }

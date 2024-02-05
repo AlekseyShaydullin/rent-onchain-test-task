@@ -1,4 +1,11 @@
-import { Dispatch, FC, SetStateAction, useRef, useState } from 'react';
+import {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useCallback,
+  useRef,
+  useState,
+} from 'react';
 import cn from 'classnames';
 
 import style from './dropdownMenu.module.scss';
@@ -6,6 +13,7 @@ import style from './dropdownMenu.module.scss';
 import ButtonIconText from '../ui/buttons/buttonIconText/buttonIconText';
 import Menu from '../ui/menu/menu';
 import { IOptions } from '../../utils/types/common';
+import useOutsideClickAndEscape from '../../utils/hooks/useOutsideClickAndEscape';
 
 interface IDropdownMenu {
   tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'span';
@@ -13,6 +21,7 @@ interface IDropdownMenu {
   option: Array<IOptions>;
   iconClass: string;
   titleClass: string;
+  dropdownClass: string;
   setDropdown: Dispatch<SetStateAction<string>>;
 }
 
@@ -22,6 +31,7 @@ const DropdownMenu: FC<IDropdownMenu> = ({
   option,
   iconClass,
   titleClass,
+  dropdownClass,
   setDropdown,
 }): JSX.Element => {
   const [showDropDown, setShowDropDown] = useState<boolean>(false);
@@ -36,16 +46,29 @@ const DropdownMenu: FC<IDropdownMenu> = ({
   };
 
   // Собираем информацию из Дропдауна
-  const handleOptionClick = (e: string, options: Array<IOptions>) => {
-    const optionClick = options.find((option) => option.value === e);
-    const valueClick = optionClick!.value;
-    setShowDropDown(false);
-    setCheckOption(valueClick);
-    setDropdown(valueClick);
-  };
+  const handleOptionClick = useCallback(
+    (e: string, options: Array<IOptions>) => {
+      const optionClick = options.find((option) => option.value === e);
+      const valueClick = optionClick!.value;
+      setShowDropDown(false);
+      setCheckOption(valueClick);
+      setDropdown(valueClick);
+    },
+    [setDropdown]
+  );
 
   // Определям тайтл дропдауна
   const titleMenuMore = option.find((option) => option.value === checkOption);
+
+  // Хук отвечающий за закрытие дропдауна
+  useOutsideClickAndEscape(
+    menuRef,
+    document,
+    () => {
+      setShowDropDown(false);
+    },
+    buttonRef
+  );
 
   return (
     <div className={style.dropdownMenu}>
@@ -66,7 +89,7 @@ const DropdownMenu: FC<IDropdownMenu> = ({
           ref={menuRef}
           options={option}
           onItemClick={(e) => handleOptionClick(e.value, option)}
-          layoutClassName={style.dropdown}
+          layoutClassName={dropdownClass}
           itemClassName={style.itemParent}
           iconClass={style.iconClass}
           checkOption={checkOption}

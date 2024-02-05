@@ -44,3 +44,16 @@
   background-color: $violet;
   border-radius: 6px;
 }
+
+.dropdown {
+  background: rgb(238,238,238, .3);
+  border-radius: 2px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 2;
+
+  &__help {
+    width: 90px;
+  }
+}
