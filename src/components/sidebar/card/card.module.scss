@@ -6,6 +6,8 @@
   box-sizing: border-box;
   padding: 24px 0;
   border-bottom: 1px solid rgb(95,79,100, .3);
+  overflow: hidden;
+  transition: width .5s ease-in-out;
 
   &:last-child {
     border: none;
@@ -13,10 +15,16 @@
 }
 
 .stringWrapper {
+  width: 439px;
   @include flex(column, center, flex-start, 16px);
   padding: 0;
   margin: 0;
   list-style: none;
+  transition: width .5s ease-in-out;
+
+  &_inactive {
+    width: 50px;
+  }
 }
 
 .field {
@@ -26,6 +34,24 @@
 .nav {
   @include flex(row, space-between, center, 10px);
   text-decoration: none;
+}
+
+.wrapper {
+  @include flex();
+  opacity: 1;
+  transition: all .5s ease-in-out;
+
+}
+
+.title {
+  display: inline;
+  opacity: 1;
+  transition: all .5s ease-in-out;
+
+  &_inactive {
+    opacity: 0;
+    display: none;
+  }
 }
 
 .fieldTitle {
@@ -42,6 +68,10 @@
   @include size(30px, 30px);
   color: $white;
 
+  &:hover {
+    color: $gray;
+  }
+
   &_active {
     color: $violet;
   }
@@ -54,6 +84,11 @@
   padding: 4px 8px;
   background: $green;
   border-radius: 4px;
+
+  &_inactive {
+    opacity: 0;
+    display: none;
+  }
 }
 
 .approvedIcon {

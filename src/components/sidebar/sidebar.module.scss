@@ -5,6 +5,13 @@
   width: 439px;
   padding: 48px;
   border-right: 1px solid rgb(95,79,100, .3);
+  transition: width .4s ease-in-out;
+  overflow: hidden;
+
+  &_inactive {
+    width: 30px;
+    padding: 28px;
+  }
 }
 
 .headerSidebar {
@@ -13,9 +20,35 @@
   border-bottom: 1px solid rgb(95,79,100, .3);
 }
 
+.button {
+  display: block;
+  opacity: 1;
+  transition: all .5s ease-in-out;
+
+  &_inactive {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.title {
+  display: inline;
+  opacity: 1;
+  transition: all .5s ease-in-out;
+
+  &_inactive {
+    opacity: 0;
+    display: none;
+  }
+}
+
 .icon {
   @include size(36px, 36px);
   color: $white;
+
+  &:hover {
+    color: $gray;
+  }
 }
 
 .userHeader {
@@ -32,7 +65,6 @@
   outline: 0;
   border: none;
   resize: none;
-  overflow: hidden;
 }
 
 .wrapperBadge {
@@ -47,4 +79,7 @@
   @include font('Roboto', $xxxxs-font-size, $medium, $m-line-height);
 }
 
-
+.iconBadge {
+  @include size(36px, 36px);
+  color: $white;
+}
