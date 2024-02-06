@@ -13,14 +13,24 @@ interface IContacts {
 const Contacts: FC<IContacts> = ({ optionsContacts }): JSX.Element => {
   return (
     <div className={style.contacts}>
-      <Typography tag={'p'} fontFamily={'primary'} color={'black'}>
+      <Typography
+        tag={'p'}
+        extraClass={style.title}
+        fontFamily={'primary'}
+        color={'black'}
+      >
         {'CONTACT US'}
       </Typography>
       <div className={style.office}>
         {optionsContacts.map((options, index) => {
           return (
             <Fragment key={index}>
-              <Typography tag={'h3'} fontFamily={'secondary'} color={'black'}>
+              <Typography
+                tag={'h3'}
+                extraClass={style.optionTitle}
+                fontFamily={'secondary'}
+                color={'black'}
+              >
                 {options.title}
               </Typography>
               <Typography

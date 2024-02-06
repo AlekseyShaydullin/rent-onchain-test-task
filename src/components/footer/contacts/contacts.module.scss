@@ -4,6 +4,27 @@
 .contacts {
   @include flex(column, center, flex-start);
   width: 381px;
+
+  @media (max-width: 1160px) {
+    width: 281px;
+  }
+
+  @media (max-width: 900px) {
+  }
+}
+
+.title {
+  @media (max-width: 1160px) {
+    font-size: $s-font-size;
+  }
+
+  @media (max-width: 900px) {
+    font-size: $xxs-font-size;
+  }
+
+  @media (max-width: 525px) {
+    font-size: $xxxxs-font-size;
+  }
 }
 
 .office {
@@ -11,7 +32,37 @@
   padding-top: 16px;
 }
 
+.optionTitle {
+  @media (max-width: 1160px) {
+    font-size: $s-font-size;
+  }
+
+  @media (max-width: 900px) {
+    font-size: $xs-font-size;
+  }
+
+  @media (max-width: 525px) {
+    font-size: $xxxxs-font-size;
+  }
+}
+
 .titleAddress {
   font-weight: $regular;
   text-align: left;
+
+  @media (max-width: 1260px) {
+    font-size: $s-font-size;
+  }
+
+  @media (max-width: 1160px) {
+    font-size: $xs-font-size;
+  }
+
+  @media (max-width: 900px) {
+    font-size: $xxs-font-size;
+  }
+
+  @media (max-width: 525px) {
+    font-size: $xxxxs-font-size;
+  }
 }

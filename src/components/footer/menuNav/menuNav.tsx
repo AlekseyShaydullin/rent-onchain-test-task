@@ -13,7 +13,12 @@ interface IMenu {
 const MenuNav: FC<IMenu> = ({ optionsNav }): JSX.Element => {
   return (
     <div className={style.menu}>
-      <Typography tag={'p'} fontFamily={'primary'} color={'black'}>
+      <Typography
+        tag={'p'}
+        extraClass={style.title}
+        fontFamily={'primary'}
+        color={'black'}
+      >
         {'MENU'}
       </Typography>
       <div className={style.nav}>

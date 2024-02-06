@@ -4,11 +4,33 @@
 .form {
   @include flex(column, center, flex-start, 20px);
   padding-top: 42px;
+
+  @media (max-width: 1260px) {
+    padding-top: 0;
+  }
+
+  @media (max-width: 900px) {
+    max-width: 496px;
+  }
 }
 
 .text {
   text-transform: uppercase;
-  text-align: left
+  text-align: left;
+
+  @media (max-width: 1260px) {
+    font-size: $xxs-font-size;
+  }
+
+  @media (max-width: 900px) {
+    max-width: 496px;
+    text-align: left;
+  }
+
+  @media (max-width: 525px) {
+    max-width: 320px;
+    font-size: $xxxxs-font-size;
+  }
 }
 
 .input {
@@ -22,6 +44,23 @@
   resize: none;
   overflow: hidden;
   border-bottom: 1px solid $dark-gray;
+
+  @media (max-width: 1260px) {
+    max-width: 439px;
+  }
+
+  @media (max-width: 1160px) {
+    max-width: 339px;
+  }
+
+  @media (max-width: 900px) {
+    max-width: 496px;
+  }
+
+  @media (max-width: 525px) {
+    max-width: 320px;
+    font-size: 12px;
+  }
 }
 
 .privacy {
@@ -40,6 +79,10 @@
       border-bottom: 1px solid $gray;
     }
   }
+
+  @media (max-width: 525px) {
+    font-size: 12px;
+  }
 }
 
 .button {
@@ -49,9 +92,31 @@
   padding: 32px 0;
   border-radius: 12px;
   background: $violet;
+
+  @media (max-width: 1260px) {
+    max-width: 439px;
+  }
+
+  @media (max-width: 1160px) {
+    max-width: 339px;
+  }
+
+  @media (max-width: 900px) {
+    max-width: 496px;
+    padding: 20px 0;
+    margin: 0;
+  }
+
+  @media (max-width: 525px) {
+    max-width: 320px;
+  }
 }
 
 .titleButton {
   @include font('Syncopate', $xs-font-size, $bold, $m-line-height, $xs-letter-space);
   color: $white;
+
+  @media (max-width: 525px) {
+    font-size: $xxxs-font-size;
+  }
 }

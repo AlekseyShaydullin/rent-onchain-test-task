@@ -9,8 +9,14 @@ import Statistics from '../../components/referrals/statistics/statistics';
 
 import { optionsReports, optionsResult } from './configReferrals';
 
-const Referrals: FC = (): JSX.Element => {
+interface IReferrals {
+  screen: boolean;
+}
+
+const Referrals: FC<IReferrals> = ({ screen }): JSX.Element => {
   const [phrase, setPhrase] = useState<string>('');
+
+  console.log(`Referrals - ${screen}`);
 
   return (
     <section className={style.referrals}>

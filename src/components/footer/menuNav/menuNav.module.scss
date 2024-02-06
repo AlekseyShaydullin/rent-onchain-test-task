@@ -4,6 +4,27 @@
 .menu {
   @include flex(column, center, flex-start);
   width: 246px;
+
+  @media (max-width: 1160px) {
+    width: 200px;
+  }
+
+  @media (max-width: 900px) {
+  }
+}
+
+.title {
+  @media (max-width: 1160px) {
+    font-size: $s-font-size;
+  }
+
+  @media (max-width: 900px) {
+    font-size: $xxs-font-size;
+  }
+
+  @media (max-width: 525px) {
+    font-size: $xxxxs-font-size;
+  }
 }
 
 .nav {
@@ -22,5 +43,21 @@
 
   &:hover {
     color: $gray;
+  }
+
+  @media (max-width: 1260px) {
+    font-size: $s-font-size;
+  }
+
+  @media (max-width: 1160px) {
+    font-size: $xs-font-size;
+  }
+
+  @media (max-width: 900px) {
+    font-size: $xxs-font-size;
+  }
+
+  @media (max-width: 525px) {
+    font-size: $xxxxs-font-size;
   }
 }

@@ -8,7 +8,13 @@ import HeaderLayout from './headerLayout/headerLayout';
 import Footer from '../footer/footer';
 import Sidebar from '../sidebar/sidebar';
 
-const Layout: FC = (): JSX.Element => {
+interface ILayout {
+  screen: boolean;
+}
+
+const Layout: FC<ILayout> = ({ screen }): JSX.Element => {
+  console.log(`Layout - ${screen}`);
+
   return (
     <>
       <Header />
@@ -19,7 +25,7 @@ const Layout: FC = (): JSX.Element => {
           <Outlet />
         </div>
       </main>
-      <Footer />
+      <Footer screen={screen} />
     </>
   );
 };
