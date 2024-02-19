@@ -3,7 +3,12 @@
 
 .wallet {
   @include flex(row, space-between, center);
-  width: 676px;
+  max-width: 676px;
+  width: 100%;
+
+  // @media (max-width: 1320px) {
+
+  // }
 
   &__text {
     @include font('Red Hat Display', $s-font-size, $semiBold, $xl-line-height, $l-letter-space);

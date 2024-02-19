@@ -3,10 +3,15 @@
 
 .codes {
   @include flex(column, center, flex-start, 16px);
-  @include size(676px, 244px);
+  @include max-size(676px, 244px);
   padding: 24px;
   border-radius: 12px;
   background: $white;
+
+  @media (max-width: 1320px) {
+    width: 576px;
+    transition: width .1s ease-in-out;
+  }
 }
 
 .titleCodes {
@@ -15,7 +20,8 @@
 
 .special {
   @include flex(row, space-between, center);
-  width: 676px;
+  max-width: 676px;
+  width: 100%;
 
   &__text {
     @include font('Red Hat Display', $s-font-size, $semiBold, $xl-line-height, $l-letter-space);

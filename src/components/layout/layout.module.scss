@@ -1,6 +1,6 @@
 @use '../../stylesheets/variables.scss' as *;
 @use '../../stylesheets/mixins' as *;
 
-.wrapper {
+.wrapperLayout {
   @include flex(row, $gap: 30px)
 }

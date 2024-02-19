@@ -8,7 +8,7 @@ import NotFound from '../../pages/not-found';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [isScreenBig, setIsScreenBig] = useState(true);
+  const [screen, setScreen] = useState<string>('full');
 
   let resizeDisplay = 0;
 
@@ -21,10 +21,12 @@ function App() {
     const width = window.innerWidth;
     console.log(`width - ${width}`);
 
-    if (width > 900) {
-      setIsScreenBig(true);
+    if (width < 900) {
+      setScreen('small');
+    } else if (width < 1065) {
+      setScreen('medium');
     } else {
-      setIsScreenBig(false);
+      setScreen('full');
     }
   }
 
@@ -38,10 +40,10 @@ function App() {
 
   return (
     <Routes>
-      <Route element={<Layout screen={isScreenBig} />}>
+      <Route element={<Layout screen={screen} />}>
         <Route
           path={routesUrl.referrals}
-          element={<Referrals screen={isScreenBig} />}
+          element={<Referrals screen={screen} />}
         />
       </Route>
       <Route path={routesUrl.notFound} element={<NotFound />} />

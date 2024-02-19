@@ -53,6 +53,7 @@ const HeaderLayout: FC = (): JSX.Element => {
           tag={'h5'}
           fontFamily={'primary'}
           title={'ACCESS'}
+          titleClass={style.titleButton}
           buttonClass={style.button}
           onClick={getAccess}
         />

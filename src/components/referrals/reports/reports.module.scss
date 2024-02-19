@@ -3,6 +3,8 @@
 
 .reports {
   @include flex(column, $gap: 16px);
+  max-width: 724px;
+  width: 100%;
 }
 
 .wrapperReferral {

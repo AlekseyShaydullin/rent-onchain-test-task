@@ -7,12 +7,14 @@ interface IField {
 
 export interface IOptionsCard {
   title: string;
+  icon: string;
   fields: Array<IField>;
 }
 
 export const optionsCard = [
   {
     title: 'ACCOUNT',
+    icon: 'user',
     fields: [
       {
         icon: 'user',
@@ -42,6 +44,7 @@ export const optionsCard = [
   },
   {
     title: 'INVESTMENTS',
+    icon: 'chart-line',
     fields: [
       {
         icon: 'chart-bar',
@@ -71,6 +74,7 @@ export const optionsCard = [
   },
   {
     title: 'MARKETPLACE',
+    icon: 'shopping-bag',
     fields: [
       {
         icon: 'tag',
@@ -94,6 +98,7 @@ export const optionsCard = [
   },
   {
     title: 'RAFFLE',
+    icon: 'ticket-voucher',
     fields: [
       {
         icon: 'drag-horizontal',
@@ -111,6 +116,7 @@ export const optionsCard = [
   },
   {
     title: 'DOCUMENTS',
+    icon: 'file-document',
     fields: [
       {
         icon: 'file-document',

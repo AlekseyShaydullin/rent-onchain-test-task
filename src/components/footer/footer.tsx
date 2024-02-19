@@ -10,7 +10,7 @@ import { optionsContacts, optionsNav } from './config';
 import Typography from '../ui/typography/typography';
 
 interface IFooter {
-  screen: boolean;
+  screen: string;
 }
 
 const Footer: FC<IFooter> = ({ screen }): JSX.Element => {
@@ -27,7 +27,7 @@ const Footer: FC<IFooter> = ({ screen }): JSX.Element => {
 
   return (
     <footer className={style.footer}>
-      {screen ? (
+      {screen !== 'small' ? (
         <div className={style.wrapper}>
           <div className={style.information}>
             <div className={style.basic}>

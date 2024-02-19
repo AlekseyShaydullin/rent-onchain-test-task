@@ -4,7 +4,13 @@
 .referrals {
   @include flex(column, flex-start, flex-start, $gap: 42px);
   padding-top: 33px;
+
+  @media (max-width: 1320px) {
+    padding-right: 20px;
+  }
 }
+
+.title {}
 
 .cards {
   @include flex(column, flex-start, flex-start, $gap: 24px);

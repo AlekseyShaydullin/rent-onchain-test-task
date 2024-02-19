@@ -3,30 +3,43 @@
 
 .statistics {
   @include flex(column, space-between);
+    min-width: 360px;
+    width: 100%;
 }
 
 .header {
-  @include flex($gap: 15px);
+  @include flex($justify-content: space-between, $gap: 15px);
   padding-bottom: 8px;
   border-bottom: 1px solid $light-gray;
 
   &__title {
     text-transform: uppercase;
+
+    @media (max-width: 1320px) {
+      font-size: $xxs-font-size;
+    }
   }
 }
 
 .wrapperTitle {
   @include flex (row, flex-start, center);
-  width: 360px;
+
 }
 
 .values {
   @include flex(row, space-between, center, 15px);
-  width: 349px;
+  width: 318px;
+
+  @media (max-width: 1320px) {
+    width: 270px;
+    gap: 10px;
+  }
 }
 
 .statistic {
   @include flex(column, space-between, center);
+  min-width: 360px;
+  width: 100%;
   height: 63vh;
   margin-top: 16px;
 }

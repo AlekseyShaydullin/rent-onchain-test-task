@@ -10,7 +10,7 @@ import Statistics from '../../components/referrals/statistics/statistics';
 import { optionsReports, optionsResult } from './configReferrals';
 
 interface IReferrals {
-  screen: boolean;
+  screen: string;
 }
 
 const Referrals: FC<IReferrals> = ({ screen }): JSX.Element => {
@@ -20,7 +20,12 @@ const Referrals: FC<IReferrals> = ({ screen }): JSX.Element => {
 
   return (
     <section className={style.referrals}>
-      <Typography tag="h2" fontFamily="primary" color={'white'}>
+      <Typography
+        tag="h2"
+        extraClass={style.title}
+        fontFamily="primary"
+        color={'white'}
+      >
         {'MY REFERRALS'}
       </Typography>
       <div className={style.cards}>

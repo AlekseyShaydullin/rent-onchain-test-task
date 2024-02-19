@@ -33,6 +33,7 @@
 
 @mixin max-size($max-width, $max-height) {
   max-width: $max-width;
+  width: 100%;
   max-height: $max-height;
 }
 

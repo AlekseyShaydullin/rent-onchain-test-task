@@ -46,27 +46,38 @@
 .title {
   display: inline;
   opacity: 1;
-  transition: all .5s ease-in-out;
+  transition: all .3s ease-in-out;
 
   &_inactive {
     opacity: 0;
     display: none;
   }
+
+  @media (max-width: 1230px) {
+    font-size: $xxxs-font-size;
+  }
 }
 
 .fieldTitle {
+  transition: all .3s ease-in-out;
+
   &_active {
     color: $violet;
   }
 
   &:hover {
     color: $gray;
+  }
+
+  @media (max-width: 1230px) {
+    font-size: $xxs-font-size;
   }
 }
 
 .icon {
   @include size(30px, 30px);
   color: $white;
+  transition: all .3s ease-in-out;
 
   &:hover {
     color: $gray;
@@ -74,6 +85,10 @@
 
   &_active {
     color: $violet;
+  }
+
+  @media (max-width: 1230px) {
+    @include size(20px, 20px);
   }
 }
 

@@ -38,4 +38,9 @@
     position: absolute;
     bottom: 5px;
   }
+
+  @media (max-width: 1320px) {
+    @include size(253px, 110px);
+    transition: width .1s ease-in-out;
+  }
 }

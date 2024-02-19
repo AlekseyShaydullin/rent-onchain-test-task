@@ -9,7 +9,7 @@ import Footer from '../footer/footer';
 import Sidebar from '../sidebar/sidebar';
 
 interface ILayout {
-  screen: boolean;
+  screen: string;
 }
 
 const Layout: FC<ILayout> = ({ screen }): JSX.Element => {
@@ -20,8 +20,8 @@ const Layout: FC<ILayout> = ({ screen }): JSX.Element => {
       <Header />
       <main>
         <HeaderLayout />
-        <div className={style.wrapper}>
-          <Sidebar />
+        <div className={style.wrapperLayout}>
+          <Sidebar screen={screen} />
           <Outlet />
         </div>
       </main>

@@ -2,7 +2,9 @@
 @use '../../../stylesheets/mixins' as *;
 
 .report {
-  @include flex(row);
+  @include flex(row, $justify-content: space-between);
+  max-width: 728px;
+  width: 100%;
 
   &_progeny {
     cursor: $cursor;
@@ -38,6 +40,9 @@
   }
 
   &__title {
+    min-width: 110px;
+    width: 100%;
+    text-align: left;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -51,17 +56,20 @@
 
 .wrapperTitle {
   @include flex(row, flex-start, center, 8px);
-  width: 326px;
+  min-width: 132px;
+  width: 100%;
   padding-right: 14px;
 }
 
 .wrapperValues {
   @include flex(row, flex-start, center, 15px);
-  width: 365px;
+  max-width: 349px;
+  width: 100%;
 }
 
 .value {
-  width: 100px;
+  min-width: 48px;
+  width: 100%;
   text-align: left;
 
   &:last-child {
